@@ -1,0 +1,10 @@
+[
+	{
+		"fire + air" : "lightning",
+		"fire + dirt" : "stone",
+		"fire + water" : "steam",
+		"air + water" : "fog",
+		"dirt + water" : "anotherdirt"
+	}
+
+]
