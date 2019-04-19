@@ -14,6 +14,7 @@ body {
 	        flex-direction: row;
 	-webkit-justify-content: space-between;
 	        justify-content: space-between;
+	position: relative;
 }
 
 .top-bar {
@@ -109,4 +110,33 @@ button:active, button:focus {
 	display: flex;
 	-webkit-justify-content: space-between;
 	        justify-content: space-between;
+}
+
+.second {
+	display: none;
+}
+
+.third {
+	display: none;
+}
+
+.pags {
+	position: absolute;
+	top: 580px;
+	left: 30px;
+	
+}
+
+
+.pags button {
+	border: none;
+	width: 25px;
+	height: 25px;
+	background: rgba(0,0,0,.4);
+	color: rgba(255,255,255,.8);
+	cursor: pointer;
+}
+
+.pags .active {
+	background: rgba(255, 255, 255, 0.6);
 }

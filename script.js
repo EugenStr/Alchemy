@@ -1,6 +1,6 @@
 window.onload = (function() {
 	var ingredients = document.querySelectorAll('.ingredient-item'),
-		ingredientsUl = document.querySelector('.ingredient-items'),
+		ingredientsUl = document.querySelectorAll('.ingredient-items'),
 		craftfield = document.querySelector('.alch-circle'),
 		button =  document.querySelector('.craft-new-item'),
 		craft = document.querySelector('.craft__field-for-items'),
@@ -39,7 +39,6 @@ window.onload = (function() {
 						key == `${second} + ${first}`) { // Если ключ из обьекта равен строке из двух элементов
 						count = 0;   // Обнуляем счетчик	
 						for (let value of count2) {
-							console.log(value)
 							if (value !== answers[key]) continue
 								else {
 									button.style.background = "#FF4500";
@@ -71,7 +70,18 @@ window.onload = (function() {
 									return
 								}
 						})
-						ingredientsUl.appendChild(newLi); // Добавляем созданный li в ul
+						if (count2.length < 11) {	
+							ingredientsUl[0].appendChild(newLi); // Добавляем созданный li в ul
+						}
+						else if (count2.length < 22) {
+							ingredientsUl[1].appendChild(newLi); // Добавляем созданный li в ul
+							show2()
+						}
+						else if (count2.length < 33) {
+							ingredientsUl[2].appendChild(newLi); // Добавляем созданный li в ul
+							show3()
+						}
+
 						while (craft.firstChild) {
    							craft.removeChild(craft.firstChild); // Чистим ul с элементами
 						}
@@ -105,9 +115,8 @@ window.onload = (function() {
 				return
 			}
 		})
+		
 
-
-	
 })()
 
 const answers = {
@@ -115,7 +124,14 @@ const answers = {
 		"fire + earth" : "Stone",
 		"fire + water" : "Steam",
 		"air + water" : "Fog",
-		"earth + water" : "Dirt",
+		"earth + water" : "Dirt", // 5
+		"air + Fog" : "Cloud",
+		"fire + Light" : "Sun",
+		"air + Stone" : "Sand",
+		"water + Fog" : "Ice",
+		"Stone + Sun" : "Moon",
+		"Light + Dirt" : "DNK",
+		"Dirt + Sand" : "Clay"
 	}
 
 
@@ -143,4 +159,46 @@ class Game {
 }
 
 	
+let btn = document.querySelectorAll('.btn');
+let items = document.querySelectorAll('.ingredient-items');
+		function show1() {
+			if (btn[0].classList.contains('active')) {
+				return
+			}
+			else {
+				btn[1].classList.remove('active');
+				btn[2].classList.remove('active');
+				btn[0].classList.add('active');
+				items[0].style.display = "block";
+				items[1].style.display = "none";
+				items[2].style.display = "none";
+			}
+		}
 
+		function show2() {
+			if (btn[1].classList.contains('active')) {
+				return
+			}
+			else {
+				btn[0].classList.remove('active');
+				btn[2].classList.remove('active');
+				btn[1].classList.add('active');
+				items[0].style.display = "none";
+				items[1].style.display = "block";
+				items[2].style.display = "none";
+			}
+		}
+
+		function show3() {
+			if (btn[2].classList.contains('active')) {
+				return
+			}
+			else {
+				btn[0].classList.remove('active');
+				btn[1].classList.remove('active');
+				btn[2].classList.add('active');
+				items[0].style.display = "none";
+				items[1].style.display = "none";
+				items[2].style.display = "block";
+			}
+		}
