@@ -1,0 +1,111 @@
+@import "reset.css";
+body {
+	background: #f5f5f5;
+}
+
+.main-wrapper {
+	width: 800px;
+	margin: 0 auto;
+	min-height: 625px;
+	background: url(../img/main-background.jpg) no-repeat center top / cover;
+	display: flex;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+}
+
+.top-bar {
+	display: flex;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	width: 650px;
+	min-height: 70px;
+	background: rgba(0,0,0,.4);
+}
+
+.ingredient-items {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	    width: 100%;
+	border: 10px solid rgba(0, 255, 127, 0.3);
+}
+
+.ingredient-items li {
+	height: 35px;
+	padding-top: 10px;
+	
+	margin: 6px;
+	-webkit-border-radius: 15px;
+	        border-radius: 15px;
+	padding-right: 15px;
+	background: rgba(255, 255, 255, 0.6);
+	cursor: pointer;
+}
+
+.ingredient-items li img {
+	vertical-align: middle;
+	margin-top: -5px;
+	padding-right: 20px;
+	margin-left: 10px;
+}
+
+h1 {
+	padding-top: 17px;
+	text-transform: uppercase;
+	font-size: 35px;
+	color: rgba(255,255,255,.8);
+	padding-left: 80px;
+}
+
+.playing-field {
+	height: 555px;
+	position: relative;
+}
+
+
+.nav-bar li {
+	display: inline-block;
+	padding-top: 23px;
+	padding-right: 20px;
+}
+
+.alch-circle {
+	padding-top: 20px;
+	padding-left: 60px;
+}
+
+
+
+.craft-new-item {
+	border: 1px solid #f2f2f2;
+	background: rgba(0,0,0,.4);
+	color: rgba(255,255,255,.8);
+	padding: 20px;
+	-webkit-border-radius: 20px;
+	        border-radius: 20px;
+	margin-top: 60px;
+	font-size: 20px;
+	margin-left: 180px;
+	
+}
+
+button:active, button:focus {
+  	outline: none;
+}
+
+.craft__field-for-items {
+	position: absolute;
+	width: 250px;
+	height: 70px;
+	top: 190;
+	left: 185;
+	display: flex;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+}
