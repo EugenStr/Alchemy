@@ -73,11 +73,11 @@ window.onload = (function() {
 						if (count2.length < 11) {	
 							ingredientsUl[0].appendChild(newLi); // Добавляем созданный li в ul
 						}
-						else if (count2.length < 22) {
+						else if (count2.length < 21) {
 							ingredientsUl[1].appendChild(newLi); // Добавляем созданный li в ul
 							show2()
 						}
-						else if (count2.length < 33) {
+						else if (count2.length < 32) {
 							ingredientsUl[2].appendChild(newLi); // Добавляем созданный li в ul
 							show3()
 						}
@@ -131,7 +131,14 @@ const answers = {
 		"water + Fog" : "Ice",
 		"Stone + Sun" : "Moon",
 		"Light + Dirt" : "DNK",
-		"Dirt + Sand" : "Clay"
+		"Dirt + Sand" : "Clay",
+		"earth + DNK" : "Mush",
+		"Sand + fire" : "Glass",
+		"earth + Sun" : "Dark",
+		"fire + Clay" : "Brick",
+		"Sand + Glass" : "Clock",
+		"Sun + DNK" : "Grass",
+		"Ice + Cloud" : "Snow"
 	}
 
 
