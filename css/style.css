@@ -97,6 +97,15 @@ h1 {
 	
 }
 
+.craft-new-item:active {
+	-webkit-box-shadow: inset 0 5px 10px rgba(0,0,0,.5);
+	        box-shadow: inset 0 5px 10px rgba(0,0,0,.5);
+}
+
+.craft-new-item:active {
+	box-shadow: inset 0 0 10px rgba(0,0,0,.5)
+}
+
 button:active, button:focus {
   	outline: none;
 }
@@ -139,4 +148,20 @@ button:active, button:focus {
 
 .pags .active {
 	background: rgba(255, 255, 255, 0.6);
+}
+
+
+
+.reset {
+	border: 1px solid #f2f2f2;
+	background: rgba(0,0,0,.1);
+	color: rgba(255,255,255,.8);
+	padding: 5px 15px;
+	-webkit-border-radius: 20px;
+	        border-radius: 20px;
+}
+
+.reset:active {
+	-webkit-box-shadow: inset 0 5px 10px rgba(0,0,0,.5);
+	        box-shadow: inset 0 5px 10px rgba(0,0,0,.5);
 }
